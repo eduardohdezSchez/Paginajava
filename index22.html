@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:brown;
+        color: cornsilk;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: cursive;
+        font-size: 2.4em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+
+</style>
+
+<body>
+    <script lenguaje= javaescript>
+        function fibonacci(){
+	var x = 0;
+	var valor = document.getElementById('num').value;
+	var arreglo = [];
+	valor = parseInt(valor);
+	for (x; x<valor; x++){
+		if(x==0){
+			arreglo.push(0);
+		}
+		else if(x==1){
+			arreglo.push(1);
+		}
+		else{
+			arreglo.push(arreglo[x-1]+arreglo[x-2]);
+		}
+	}
+	document.getElementById("resultado").innerHTML ="<h3>"+arreglo+"</h3>";
+}
+        
+        </script>  
+
+        <p>
+            ESTE PROGRAMA MUESTRA LA SERIE DE FIBONACCI
+        </p>
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading"><strong>Serie Fibonacci</strong>
+            </div>
+            <div class="panel-body">
+                <input id="num" name="numero" class="form-control" type="number" placeholder="ingresa un numero"><br><br>
+                <button class="btn btn-success" onclick="fibonacci()">Mostrar Serie</button>
+            </div>
+            <br><br>
+            <div class="panel-footer" id="resultado" style="word-wrap: break-word;"></div>
+        </div>	
+    </div>
+    <br><br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeración del 100 al 0</title>
+</head>
+<body id="número">
+    <div><p> ESTE PROGRAMA MUESTRA LA NÚMERACIÓN DEL 100 AL 0</p></div>
+    <form id="número"></form>
+    <div id="ara_2">
+        <textarea name="2" id="numeracion2" cols="60%" rows="10"></textarea>
+        <br>
+        <button id="boton2" onclick="numerarAtras()">MOSTRAR</button><br><br>
+    </div>
+</body>
+
+<style>
+    body{
+        background-color: rgb(118, 136, 76);
+        text-align: center;
+
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: cursive;
+        font-size: 2.4em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+
+
+
+<script>
+ function numerarAtras(){
+    var $a = 0;
+    var $b = document.getElementById("numeracion2");
+    var $c = 100;
+    var $most;
+
+    if($b.value == ""){
+        $most = window.setInterval(
+            function(){
+                $b.value += $c + ", ";
+                $c--;
+                if($c == a){
+                    clearInterval($most);
+                    $c = 100;
+                }
+            }
+            , 500);
+    }else if($b.value != ""){
+        $b.value="";
+        clearInterval($most);
+        $c=100;
+    }
+}
+</script>
+
+<br>
+<a href="index0.html">REGRESAR</a>
+</html>

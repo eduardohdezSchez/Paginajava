@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+  margin-top:80px;
+}
+.color-icono-menu{
+  border:1px solid;
+}
+body{
+  background: url(http://laflecha.net/wp-content/uploads/2015/08/forex.jpg) center center fixed;
+  background-size: 100% 100%;
+  background-color: burlywood;
+
+}
+.color-menu{
+  opacity: .9;
+}
+.color-contenedor{
+  background: white;
+  padding:10px;
+  opacity:.95;
+  border-radius:10px
+}
+.color-contenedor-respuesta{
+  background-color: #CF2027;
+  padding:10px;
+  opacity:.95;
+  margin-top:10px;
+  border-radius:10px;
+  color:white;
+  text-align:center;
+  font-size:2em;
+  display:none;
+}
+.text-right{
+  line-height: 34px;
+}
+p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    
+    <p>
+        OIGA PROFE, ESTE PROGRAMA LO BUSQUE EN UNA PAGINA SOLO PARA SABER COMO FUNCIONADA, PORQUE LO INTENTABA HACER Y NO ME FUNCIONABA. 
+    </p>
+      <div class="container">
+        <div class="col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8 col-xs-offset-2 color-contenedor">
+      
+            <div class="from-group">
+              <label for="Divisa" class="col-xs-5 control-label text-right">Dolares</label>
+              <div class="col-xs-7"><input type="number" min="0" Max="10000" class="form-control" id="dolar"/></div><span style="opacity:0;">.</span>
+            </div>
+            <div class="from-group">
+              <label for="Divisa" class="col-xs-5 col-sm-5 control-label text-right">Moneda</label>
+              <div class="col-xs-7 col-sm-7">
+                <select name="moneda" id="moneda" class="form-control">
+                  <option value="0">Seleccione</option>
+                  <option value="E">Euros</option>
+                  <option value="PA">Peso Argentino</option>
+                  <option value="PCH">Peso Chileno</option>
+                  <option value="PC">Peso Colombiano</option>
+                  <option value="LE">Libra Esterlina</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-offset-5 col-xs-7">
+                <button class="btn btn-primary btn-lg" onclick="calculardivisa()" id="calcular">Calcular</button>
+              </div>
+            </div>
+            <br><br>
+      
+        </div>
+        <div class="col-md-offset-3 col-md-6 col-md-offset-3 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8 col-xs-offset-2 color-contenedor-respuesta" id="respuesta">
+        </div>
+      </div>
+      <script>
+          function calculardivisa(){
+  var moneda = document.getElementById('moneda').value;
+  var respuesta = document.getElementById('respuesta');
+  if(moneda == 0 || moneda =="0"){
+    respuesta.style.display="initial";
+    respuesta.innerHTML ="Debes seleccionar una moneda";
+  }else{
+    var dolares = document.getElementById('dolar').value;
+    if(moneda == "E"){
+      var totalcambio = parseInt(dolares)* 0.89;
+      respuesta.innerHTML = dolares + " USD Equivale a " + totalcambio.toFixed(2) + " EUR";
+    }else if(moneda == "PA"){
+      var totalcambio = parseInt(dolares)* 15.15;
+      respuesta.innerHTML = dolares + " USD Equivale a " + totalcambio.toFixed(2) + " ARS";
+    }else if(moneda == "PCH"){
+      var totalcambio = parseInt(dolares)* 660.63;
+      respuesta.innerHTML = dolares + " USD Equivale a " + totalcambio.toFixed(2) + " CLP";
+    }else if(moneda == "PC"){
+      var totalcambio = parseInt(dolares)* 2913.56;
+      respuesta.innerHTML = dolares + " USD Equivale a " + totalcambio.toFixed(2) + " COP";
+    }else if(moneda == "LE"){
+      var totalcambio = parseInt(dolares)* 0.77;
+      respuesta.innerHTML = dolares + " USD Equivale a " + totalcambio.toFixed(2) + " GBP";
+    }
+    
+  respuesta.style.display="initial";
+  
+  }
+}           
+
+      </script>
+          <br><br>
+          <a href="index0.html">REGRESAR</a>
+</body>
+</html>

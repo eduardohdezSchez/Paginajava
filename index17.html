@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<style>
+        body{
+        background-color: rgb(230, 115, 70);
+        text-align: center;
+        font-family: cursive;
+
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: cursive;
+        font-size: 2.4em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+
+
+
+
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA EL FACTORIAL DE UN NÚMERO
+    </p>
+    <br>
+    <br>
+    <div>
+        <input type="text" id="numero"/>
+        <br><br>
+        <button type="button" onclick="calcularFactorial()">CALCULAR FACTORIAL</button>
+        <BR>
+        <BR>
+        <label id="texto"></label>
+    </div>
+
+    <script>
+        function calcularFactorial(){
+            var $numero=document.getElementById('numero').value;
+            var $resultado=1;
+            var $i;
+            for($i=1; $i<=$numero; $i++){
+                $resultado=$resultado*$i;
+            }
+            document.getElementById('texto').innerHTML="EL FACTORIAL DEL NÚMERO : "+ $numero + " es : " + $resultado + "<br>"; 
+        }
+    </script>
+    <br>
+    <br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>

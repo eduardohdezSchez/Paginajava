@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: rgb(117, 140, 158);
+    text-align: center;
+
+}
+p{
+    color: maroon;
+    background-color: mintcream;
+    font-family: cursive;
+    font-size: 2.4em;
+    margin: 5%;
+    padding: 2%;
+}
+a{
+border-radius: 5px;
+padding: 10px 7px;
+text-decoration: none;
+color: #fff;
+background-color: #333;
+margin: 5px;
+}
+small{
+    font-size: 2em;
+    font-family: cursive;
+    font-weight: bold;
+}
+button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA EL CÁLCULO DE VELOCIDAD,DISTANCIA Y TIEMPO
+    </p>
+    <div id="CalcularMRU">
+        <span><small>DIGITE LA CANTIDAD EN CUALQUIER RECUADRO, SOLAMENTE EN 2</small></span>
+        <br><br>
+        <span><small><strong>VELOCIDAD EN M/S</strong> </small></span><br><br>
+        <input type="number" name="21.1" id="veloci">
+        <br><br>
+        <span><small><strong>DISTANCIA EN METROS</strong> </small></span><br><br>
+        <input type="number" name="21.2" id="dista">
+        <br><br>
+        <span><small><strong>TIEMPO EN SEGUNDOS</strong> </small></span><br><br>
+        <input type="number" name="21.3" id="tiem">
+        <br><br>
+        <button id="boton21" onclick="Calcularvtm()">CALCULAR</button>
+    </div>
+    <script>
+        function Calcularvtm(){
+    var $a = document.getElementById("veloci");
+    var $b = document.getElementById("dista");
+    var $c = document.getElementById("tiem");
+
+
+    if($a.value == ""){
+        $a.value = $b.value / $c.value;
+    }
+    else if($b.value == ""){
+        $b.value = $a.value * $c.value;
+    }
+    else if($c.value == ""){
+        $c.value = $b.value / $a.value;
+    }
+}
+    </script>
+        <br><br>
+        <a href="index0.html">REGRESAR</a>
+</body>
+</html>

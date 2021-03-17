@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numero Mayor</title>
+</head>
+<style>
+
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+	body{
+        background-color: lightsalmon;
+        text-align: center;
+		font-family: cursive;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  h3{
+	  font-size: 1.8em;
+	  font-weight: bold;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+
+
+<body>
+	<p>
+		ESTE PROGRAMA MUESTRA EL NÚMERO MAYOR DE DOS VALORES
+	</p>
+	
+	<div id="NumMayor">
+		<span><small><h3>ESCRIBE UN NÚMERO</h3></small></span>
+		<br>
+		<input type="number" name="NumBer" id="NumBer" width="50%"
+		<br>
+		<br>
+		<span><small><h3>ESCRIBE OTRO NÚMERO</h3></small></span>
+		<br>
+		
+		<input type="number" name="number2" id="number2">
+		<br><br>
+		<button id="boton10" onclick="NumeroMayor()">MOSTRAR NÚMERO MAYOR</button><br><br>
+		<input type="text" name="10.3" id="ara10.3" disabled><br><br>
+
+	</div>
+	<script>
+		function NumeroMayor(){
+            var $a = document.getElementById("NumBer").value;
+            $a = parseFloat($a);
+            var $b = document.getElementById("number2").value;
+            $b = parseFloat($b);
+            if($a == $b){
+                document.getElementById("ara10.3").value = "Son Iguales";
+            }else if($a>$b){
+                    document.getElementById("ara10.3").value = $a;
+                }else if($b>$a){
+                document.getElementById("ara10.3").value = $b;
+        }
+}
+	</script>
+	
+    <br><br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>

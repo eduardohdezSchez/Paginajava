@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: darkgrey;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  span{
+      font-size: 2em;
+      font-family: cursive;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA LA NUMERACIÓN DEL 1 AL N
+    </p>
+   
+    <div id="numero9">
+        <span><small>ESCRIBE UN NÚMERO</small></span>
+        <br>
+        <input type="number" name="number1" id="number1">
+        <br><br>
+        <textarea name="number2" id="number2" cols="60%" rows="10"></textarea>
+        <br><br>
+        <button id="boton9" onclick="numerar1_N()">MOSTRAR NUMERACIÓN</button>
+    </div>
+    <script>
+        function numerar1_N(){
+    var $a = document.getElementById("number1").value;
+    $a = parseInt($a);
+    var $b = document.getElementById("number2");
+    var $c = 1;
+    var $numerar;
+
+    if($b.value == ""){
+        $numerar = window.setInterval(
+            function(){
+                $b.value += $c + ", ";
+                $c++;
+                if($c > $a){
+                    clearInterval($numerar);
+                    $c = 1;
+                }
+            }
+            , 500);
+    }else if($b.value != ""){
+        $b.value="";
+        clearInterval($numerar);
+        c=1;
+    }
+}
+    </script>
+    <br><br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de las Figuras</title>
+</head>
+<style>
+        body{
+        background-color: lightsalmon;
+        text-align: center;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+  
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA EL ÁREA DE LAS SIGUIENTES FIGURAS
+    </p>
+    <br>
+    <div id="CalcularAreas">
+        <span><strong>CUADRADO</strong></span>
+        <br>
+        <span><small>INGRESA EL LADO DEL CUADRADO</small></span><BR>
+        <input type="number" name="cuad" id="cuad"><br>
+        <span><small>RESULTADO</small></span><br>
+        <input type="text" name="cuad2" id="cuad2" disabled><br>
+        <button id="boton18" onclick="Areas()">Calcular</button>
+        <br>
+        <br>
+        <span><strong>RECTANGULO</strong></span>
+        <br>
+        <span><small>INGRESA LA ALTURA</small></span><br> 
+        <input type="number" name="19.3" id="rec">
+        <br>
+        <span><small>INGRESA LA BASE</small></span><BR>
+        <input type="number" name="rec2" id="rec2"><br>
+        <span><small>RESULTADO</small></span><br>
+        <input type="text" name="rec3" id="rec3" disabled><br>
+        <button id="boton18" onclick="Areas()">Calcular</button>
+        <br>
+        <br>
+        <span><strong>TRIANGULO</strong></span>
+        <br>
+        <span><small>INGRESA LA BASE</small></span><BR>
+        <input type="number" name="tri1" id="tri">
+        <br>
+        <span><small>INGRESA LA ALTURA</small></span><BR>
+        <input type="number" name="tri2" id="tri2"><br>
+        <span><small>RESULTADO</small></span><br>
+        <input type="text" name="tri3" id="tri3" disabled><br>
+        <button id="boton18" onclick="Areas()">Calcular</button>
+        <br>
+        <br>
+        <span><strong>CIRCULO</strong></span>
+        <br>
+        <span><small>INGRESA EL RADIO</small></span><br>
+        <input type="number" name="circ" id="circ"><br>
+        <span><small>RESULTADO</small></span><br>
+        <input type="text" name="cir1" id="circ1" disabled><br>
+        <button id="boton18" onclick="Areas()">Calcular</button>
+        <br>
+    </div>
+    <script>
+        function Areas(){
+    if(document.getElementById("cuad").value != ""){
+        var $a = document.getElementById("cuad").value;
+        if($a < 0){
+            $a *= -1;
+        }
+        document.getElementById("cuad2").value = $a*$a;
+    }
+
+    if(document.getElementById("rec").value!=""  &&  document.getElementById("rec2").value != ""){
+        var $a = document.getElementById("rec").value;
+        if($a < 0){
+            $a *= -1;
+        }
+        var $b = document.getElementById("rec2").value;
+        if($b < 0){
+            $b *= -1;
+        }
+        document.getElementById("rec3").value = $a*$b;
+    }
+
+    if(document.getElementById("tri").value!=""  &&  document.getElementById("tri2").value != ""){
+        var $a = document.getElementById("tri").value;
+        if($a < 0){
+            $a *= -1;
+        }
+        var $b = document.getElementById("tri2").value;
+        if($b < 0){
+            $b *= -1;
+        }
+        document.getElementById("tri3").value = ($a*$b)/2;
+    }
+
+    if(document.getElementById("circ").value!=""){
+        var $a = document.getElementById("circ").value;
+        if($a < 0){
+            $a *= -1;
+        }
+        document.getElementById("circ1").value = 3.14*$a*$a;
+    }
+}
+    </script>
+        <br>
+        <a href="index0.html">REGRESAR</a>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeración 0,100</title>
+</head>
+
+<style>
+    body{
+        background-color: cadetblue;
+        color: floralwhite;
+        text-align: center;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>ESTE PROGRAMA MUESTRA LA NUMERACIÓN DEL 0 AL 1OO DE 2 EN 2</p>
+    <br>
+    <div id="numero3">
+        <textarea name="3" id="ingresarE" cols="60%" rows="10"></textarea>
+        <br>
+        <button id="boton3" onclick="NumeraciondeDos()">MOSTRAR</button>
+    </div>
+    <script>
+    function NumeraciondeDos(){
+    var $a = 100;
+    var $b = document.getElementById("ingresarE");
+    var $c = 0;
+    var $num;
+
+    if($b.value == ""){
+        $num = window.setInterval(
+            function(){
+                $b.value += $c + ", ";
+                $c+=2;
+                if($c > $a){
+                    clearInterval($num);
+                    $c = 1;
+                }
+            }
+            , 500);
+    }else if($b.value != ""){
+        $b.value="";
+        clearInterval($num);
+        c=1;
+    }
+}
+    </script>
+    <br>
+    <a href="index0.html">REGRESAR</a>
+
+</body>
+</html>

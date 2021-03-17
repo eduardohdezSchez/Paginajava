@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicación</title>
+</head>
+<body>
+    <script>
+        function operaciones(op){
+        var ops = {
+        multiplicar: function multiplicarNumeros(n1, n2) {
+            return (parseInt(n1) * parseInt(n2));
+        },
+
+    };
+
+
+
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+
+    
+    //Comprobamos si se ha introducido números en las cajas
+    if (isNaN(parseFloat(document.getElementById('num1').value))) {
+        document.getElementById('resultado').innerHTML="<span style='color: red;'>ESCRIBE UN NÚMERO</span>";
+        document.getElementById("num1").innerText = "0";
+        document.getElementById("num1").focus();
+        } 
+        else if (isNaN(parseFloat(document.getElementById('num2').value))) {
+        document.getElementById('resultado').innerHTML="<span style='color: red;'>ESCRIBE UN NÚMERO</span>";
+        document.getElementById("num2").innerText = "0";
+        document.getElementById("num2").focus();
+    }
+    else {
+    //Si se han introducido los números en ámbas cajas, operamos:
+        switch(op) {
+            case 'multiplicar':
+                var resultado = ops.multiplicar(num1, num2);
+                document.getElementById('resultado').innerHTML="<span style='color: green;'>"+resultado+"</span>";
+                break;
+
+        }
+    }
+
+}
+
+
+
+    </script>
+
+    <style>
+        p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    body{
+        background-color: rgb(233, 185, 90);
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+    }
+    button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+    </style>
+
+
+    <br>
+    <p>ESTE PROGRAMA MUESTRA LA MULTIPLICACIÓN DE DOS NÚMEROS</p>
+    <br>
+    <br>
+    <form>
+        NÚMERO 1: <input id="num1" type="number" />
+        NÚMERO 2: <input id="num2" type="number" />
+        <p id="resultado" style="color: rgb(20, 26, 20); font-size: 2em;" ></p>
+        <br />
+        <input type="button" value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" /><br />
+        <br>
+        <br>
+    </form>  
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>

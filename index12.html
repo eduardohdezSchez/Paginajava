@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: darkcyan;
+        color: floralwhite;
+        font-weight: bold;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA UN RESULTADO DE UN NÚMERO ELEVADO A UN EXPONENTE
+    </p>
+
+    <div id="ara_14">
+        <span><small>INSERTA UN NÚMERO</small></span>
+        <br>
+        <br>
+        <input type="number" name="expo1" id="expo">
+        <br>
+        <br>
+        <span><small>INSERTA UN EXPONENTE</small></span>
+        <br>
+        <br>
+        <input type="number" name="num1" id="num1">
+        <br><br>
+        <button id="boton14" onclick="Exponenciar()">MOSTRAR RESULTADO</button><br><br>
+        <input type="number" name="num2" id="num2" disabled><br><br
+    </div>
+    <script>
+        function Exponenciar(){
+    var $a = document.getElementById("expo").value;
+    $a = parseFloat($a);
+
+    var $b = document.getElementById("num1").value;
+    $b = parseInt($b);
+
+    document.getElementById("num2").value = Math.pow($a,$b);
+}
+    </script>
+    <br>
+    <br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>

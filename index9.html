@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenas Tres Numeros</title>
+</head>
+<style>
+        body{
+        background-color: rgb(236, 164, 56);
+
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: cursive;
+        font-size: 2.4em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  h3{
+      font-size: 2em;
+      font-family: cursive;
+      color: rgb(5, 5, 4);
+      font-weight: bold;
+  }
+  
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA EL ORDEN DE TRES NUMEROS DE MAYOR A MENOR
+    </p>
+    <div id="OrdenarNumeros">
+        <span><small><h3>DIGITE UN NÚMERO</h3></small></span>
+        
+        <input type="number" name="numeroone" id="numero1">
+        
+        <span><small><h3>DIGITE OTRO NÚMERO</h3></small></span><br>
+        <input type="number" name="numerotwo" id="numero2">
+        <br>
+        <span><small><h3>DIGITE OTRO MÁS PORFA</h3></small></span>
+        <input type="number" name="numerotree" id="numero3">
+        <br><br>
+        <button id="boton11" onclick="Ordenar_3()">ORDENAR NÚMEROS</button><BR><BR>
+        <input type="text" name="numerofour" id="numero4" disabled><br><br>
+    </div>
+    <script>
+        function Ordenar_3(){
+    var $a = document.getElementById("numero1").value;
+    $a = parseFloat($a);
+    var $b = document.getElementById("numero2").value;
+    $b = parseFloat($b);
+    var $c = document.getElementById("numero3").value;
+    $c = parseFloat($c);
+
+    if($a>$b && $a>$c && $b>$c){
+        document.getElementById("numero4").value = "El orden es: " +$a +", " +$b +" y "+$c;
+    }else if($a>$b && $a>$c && $c>$b){
+        document.getElementById("numero4").value = "El orden es: " +$a +", " +$c +" y "+$b;
+    }else if($b>$a && $b>$c && $a>$c){
+        document.getElementById("numero4").value = "El orden es: " +$b +", " +$a +" y "+$c;
+    }else if($b>$a && $b>$c && $c>$a){
+        document.getElementById("numero4").value = "El orden es: " +$b +", " +$c +" y "+$a;
+    }else if($c>$a && $c>$b && $a>$b){
+        document.getElementById("numero4").value = "El orden es: " +$c +", " +$a +" y "+$b;
+    }else if($c>$a && $c>$b && $b>$a){
+        document.getElementById("numero4").value = "El orden es: " +$c +", " +$b +" y "+$a;
+    }else if($a==$b && $b==$c){
+        document.getElementById("numero4").value = "Son iguales";
+    }else if($a==$b && $a>$c){
+        document.getElementById("numero4").value = "El orden es: " +$a +", " +$b +" y "+$c;
+    }else if($a==$b && $c>$a){
+        document.getElementById("numero4").value = "El orden es: " +$c +", " +$a +" y "+$b;
+    }else if($a==$c && $a>$b){
+        document.getElementById("numero4").value = "El orden es: " +$a +", " +$c +" y "+$b;
+    }else if($a==$c && $b>$a){
+        document.getElementById("numero4").value = "El orden es: " +$b +", " +$a +" y "+$c;
+    }else if($b==$c && $a>$b){
+        document.getElementById("numero4").value = "El orden es: " +$a +", " +$b +" y "+$c;
+    }else if($b==$c && $b>$a){
+        document.getElementById("numero4").value = "El orden es: " +$b +", " +$c +" y "+$a;
+    }
+
+}
+    </script>
+    <br><br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        body{
+        background-color: rgb(104, 201, 144);
+        text-align: center;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+  small{
+      font-size: 2em;
+      font-weight: bold;
+      font-family: cursive;
+  }
+  button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA LA CONVERSIÓN DE GRADOS FARENHEIT A CELCIUS Y VICEVERSA
+    </p>
+    <div id="grade">
+        <span><small>Farenheit - Celcius</small></span>
+        <br>
+        <input type="number" name="grados1" id="grados1">
+        <input type="number" name="grados2" id="grados2" disabled>
+        <br>
+        <span><small>Celcius - Fareheit</small></span>
+        <br>
+        <input type="number" name="grados3" id="grados3">
+        <input type="number" name="grados4" id="grados4" disabled><br><br>
+        <button id="boton" onclick="CalcularGrados()">Convertir</button>
+    </div>
+    <script>
+    function CalcularGrados(){
+    document.getElementById("grados2").value ="";
+    document.getElementById("grados4").value = "";
+
+
+    var $a = document.getElementById("grados1").value;
+    parseFloat($a);
+    document.getElementById("grados2").value =($a-32)*(5/9);
+
+    var $b = document.getElementById("grados3").value;
+    parseFloat($b);
+    document.getElementById("grados4").value = ($b*(9/5))+32;
+}
+
+    </script>
+        <br><br>
+        <a href="index0.html">REGRESAR</a>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad_Año</title>
+</head>
+<style>
+        body{
+        background-color: rgb(140, 186, 197);
+        text-align: center;
+    }
+    p{
+        color: maroon;
+        background-color: mintcream;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+        margin: 5%;
+        padding: 2%;
+    }
+    a{
+    border-radius: 5px;
+    padding: 10px 7px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    margin: 5px;
+  }
+small{
+    font-size: 2em;
+    font-family: cursive;
+    font-weight: bold;
+}
+button{
+    width: 10%;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: rgb(199, 76, 101);
+    color: floralwhite;
+  }
+  input{
+    width: 15%;
+  }
+</style>
+<body>
+    <p>
+        ESTE PROGRAMA MUESTRA LA EDAD QUE TIENES CON INGRESAR EL AÑO DE NACIMIENTO
+    </p>
+    <div id="ara_15">
+        <span><small>DIGITE EL AÑO DE NACIMIENTO</small></span>
+        <br><br>
+        <input type="number" name="15.1" id="añoN">
+        <br><br>
+        <span><small>EDAD CALCULADA</small></span>
+        <BR><BR>
+        <input type="number" name="15.2" id="edadC" disabled><br><br>
+        <button id="boton15" onclick="CalcularEdad()">CALCULAR</button>
+    </div>
+
+    <script>
+    function CalcularEdad(){
+    var $a = document.getElementById("añoN").value;
+    $a = parseInt($a);
+    document.getElementById("edadC").value = 2021 - $a;
+}
+    </script>
+    <br>
+    <br>
+    <a href="index0.html">REGRESAR</a>
+</body>
+</html>
